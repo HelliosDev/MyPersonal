@@ -1,0 +1,352 @@
+/* ---- Global ---- */
+* {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #17191A;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700px;
+}
+
+p {
+    font-size: 22px;
+}
+
+ul {
+    list-style: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+/* ---- Header ---- */
+#header {
+    height: 750px;
+    background: linear-gradient(to bottom, rgba(88, 0, 188, 0.85), rgba(0, 125, 251, 0.85)) fixed, url(../img/backgrounds/header_back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 34% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 34% 100%, 0 90%);
+    position: relative;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    margin-bottom: 50px;
+}
+
+.header__container {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.header__profile img, .header__information {
+    margin-top: 200px;
+    vertical-align: middle;
+}
+
+.hello {
+    width: 120px;
+    color: #6055CE;
+    background-color: #FFF;
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+
+#header h2, #header p {
+    color: #FFF
+}
+
+.header__profile img{
+    width: 220px;
+    height: 220px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    border: 2px solid #F0F0F0;
+    border-radius: 50%;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2)
+}
+
+
+/* ---- About ---- */
+#about {
+    height: 100vh;
+    position: relative;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.about-abstract {
+    position: absolute;
+    top: -200px;
+    z-index: -1;
+}
+
+.about__container {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.about__profile img {
+    width: 505px;
+}
+
+.about__information li {
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+.about__icon, .about__information li p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.about__information li p {
+    font-weight: bold;
+}
+
+.about__icon { 
+    border-radius: 50%;
+    background-color: #006BD5;
+    padding: 12px;
+    margin-right: 10px;
+}
+
+.about__icon img {
+    height: 40px;
+    width: 40px;  
+}
+
+
+/* ---- Skill ---- */
+#skill {
+    min-height: 100vh;
+    max-height: 1100px;
+    background: url(../img/backgrounds/skill_back.jpg);
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+}
+
+.skill__container {
+    width: 100%;
+    height: 100%;
+    background-color: #2817D2;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skill__deck {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.skill__item {
+    width: 400px;
+    margin: 20px 0;
+    flex-basis: calc(50% - 20px);
+    -ms-flex-preferred-size: calc(50% - 20px);
+}
+
+#skill h2 {
+    margin: 50px 0;
+}
+
+#skill progress {
+    width: 80%;
+    height: 50px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#skill progress::-webkit-progress-bar {
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+#skill progress::-webkit-progress-value {
+    background: linear-gradient(to right, rgb(0, 245, 225), #FF00EE);
+    background: -webkit-linear-gradient(linear, left top, right top, from(rgb(0, 245, 225)), to(#FF00EE));
+}
+
+#skill progress::-moz-progress-bar {
+    background: linear-gradient(to right, rgb(0, 245, 225), #FF00EE);
+}
+
+#skill progress::-ms-fill {
+    background: linear-gradient(to right, rgb(0, 245, 225), #FF00EE);
+}
+
+#skill progress::after {
+    content: "Percentage: " attr(data-value);
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#skill p {
+    width: 80%;
+    margin-top: 10px;
+}
+
+#skill em {
+    white-space: pre-wrap;
+}
+
+
+/* ---- Contact ---- */
+#contact {
+    height: 100vh;
+    text-align: center;
+    background-color: #1F2122;
+    position: relative;
+}
+
+#contact h2 {
+    color: #80939B;
+}
+
+#contact h2::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    margin: 10px auto 0;
+    background-color: #80939B;
+    display: block;
+}
+
+#contact li {
+    display: inline-block;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#contact li img {
+    width: 60px;
+    height: 60px;
+}
+
+#contact li img:hover {
+    opacity: 0.5;
+}
+
+#contact .lower-abstract {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.contact__container {
+    margin-top: 80px;
+}
+
+/* ---- Mobile Version ---- */
+@media only screen and (max-width: 900px) {
+
+    /* ---- Header ---- */
+    #header {
+        align-items: none;
+        -webkit-box-align: none;
+        -ms-flex-align: none;
+    }
+
+    .header__container {
+        text-align: center;
+        flex-direction: column-reverse;
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column-reverse;
+    }
+
+    .header__profile img {
+        margin-top: 80px;
+    }
+
+    .header__information {
+        margin-top: 40px;
+    }
+
+    .hello {
+        margin: auto;
+    }
+
+    /* ---- About ---- */
+    .about__profile {
+        display: none;
+    }
+
+    .about__information {
+        margin: auto;
+    }
+
+    .about-abstract {
+        display: none;
+    }
+
+    /* ---- Skill ---- */
+    #skill {
+        height: 1100px;
+    }
+
+    .skill__deck {
+        flex-direction: column;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
+    }
+}
